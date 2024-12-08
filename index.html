@@ -6,6 +6,9 @@
     <title>Calculator Project</title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="Main">
@@ -14,32 +17,50 @@
             <div class="TopDisplay">
                 <div class="CurrentScreen">0</div>
             </div>
+            <div class="Buttons">
+                <div class="NumberButtons">
+                    <button id="btn" onclick="this.blur()" data-number>7</button>
+                    <button id="btn" onclick="this.blur()" data-number>8</button>
+                    <button id="btn" onclick="this.blur()" data-number>9</button>
+                    
+                    <button id="btn" onclick="this.blur()" data-number>4</button>
+                    <button id="btn" onclick="this.blur()" data-number>5</button>
+                    <button id="btn" onclick="this.blur()" data-number>6</button>
+
+                    <button id="btn" onclick="this.blur()" data-number>1</button>
+                    <button id="btn" onclick="this.blur()" data-number>2</button>
+                    <button id="btn" onclick="this.blur()" data-number>3</button>
+
+                    <button class="Extended-button" id="btn" onclick="this.blur()" data-number>0</button>
+                    <button id="btn" onclick="this.blur()" data-number>.</button>
+                </div>    
+            </div>
             <div class="ClearButtonEtc">
-                <button id="ClearBut" onclick="this.blur()">C</button>
-                <button id="PercentBut" onclick="this.blur()">%</button>
-                <button id="InverseBut" onclick="this.blur()">+/-</button>
+                <button id="Clearbtn" onclick="this.blur()">C</button>
+                <button id="PercentBtn" onclick="this.blur()">%</button>
+                <button id="InverseBrn" onclick="this.blur()">+/-</button>
             </div>
             <div class="OperatorButtons">
-                <button id="btn" onclick="this.blur()" data-number>7</button>
-                <button id="btn" onclick="this.blur()" data-number>8</button>
-                <button id="btn" onclick="this.blur()" data-number>9</button>
-                
-                <button id="btn" onclick="this.blur()" data-number>4</button>
-                <button id="btn" onclick="this.blur()" data-number>5</button>
-                <button id="btn" onclick="this.blur()" data-number>6</button>
+                <button id="DivBtn" onclick="this.blur()">÷</button>
+                <button id="MultiBtn" onclick="this.blur()">x</button>
+                <button id="SubBtn" onclick="this.blur()">-</button>
+                <button id="AddBtn" onclick="this.blur()">+</button>
+                <button id="EqBtn" onclick="this.blur()">=</button>
+            </div>
 
-                <button id="btn" onclick="this.blur()" data-number>1</button>
-                <button id="btn" onclick="this.blur()" data-number>2</button>
-                <button id="btn" onclick="this.blur()" data-number>3</button>
-
-                <button id="btn" onclick="this.blur()" data-number>0</button>
-                <button id="btn" onclick="this.blur()" data-number>.</button>
-            </div>    
+        </div>
+        <div class="ReadInstructions">
+            <h3 id="ReadHeader">Instructions/How to Use</h3>
+            <p id="ReadText">
+                <ul>Select a range or combination of numbers, operations and compute to complete the calculation</ul>
+                <ul>Use the additional buttons to convert to a percent or create the inverse value</ul>
+                <ul>Select the AC button to clear the calculation or completed value at any time</ul>
+            </p>
         </div>
 
     </main>
     <footer class="Footer">
-        <h3 id="Github">Insert Github repo here</h3>
+        <h3 id="Github">https://github.com/aldrichsaladino/Calculator-Project</h3>
     </footer>
 </body>
 </html>
