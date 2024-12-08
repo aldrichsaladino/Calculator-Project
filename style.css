@@ -1,0 +1,57 @@
+/* style.css */
+
+body {
+    background-color: grey;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+    font-size: 30px;
+    margin: 5px;
+    border: 3px;
+    border-radius: 8px;
+    padding-top: 10px;
+
+}
+
+
+.TopDisplay {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    width: 40%;
+    align-items: center;
+    border: 3px;
+    border-color: black;
+    border-radius: 5px;
+}
+
+.ClearButtonEtc {
+
+
+
+}
+
+
+.OperatorButtons {
+
+
+
+}
+
+
+#btn {
+
+
+}
+
+.footer {
+
+
+
+}
