@@ -65,27 +65,32 @@ function calculateNumbers() {
     previousNumber = ""
     updateDisplay(currentNumber)
 
-
 }
 
 //Function to Clear Calculator
 function clearCalculator (func) {
+    previousNumber = ""
+    currentNumber = ""
+    operator = null
+    updateDisplay("0");
 
 }
 
 //Function for a percentage button
 function ToggleSign (func) {
-
+    currentNumber = (parseFloat(currentNumber)*-1).toString()
+    updateDisplay(currentNumber);
 
 }
 
 //Function for a value change button
 function  ChangePercent (func) {
-
+    currentNumber = (parseFloat(currentNumber)/100).toString()
+    updateDisplay(currentNumber);
 
 }
 //Event Listeners for HTML buttons 
-document.querySelectorAll("button").forEach((button)=> { //Loop in all of the button types in HTMK
+document.querySelectorAll("Button").forEach((Button)=> { //Loop in all of the button types in HTMK
     button.addEventListener("click", () => {
         const number = button.dataset.number;
         const op = button.dataset.operator;
@@ -98,5 +103,7 @@ document.querySelectorAll("button").forEach((button)=> { //Loop in all of the bu
         if(func === "Clear") clearCalculator;
         if(func === "ToggleSign") ToggleSign;
         if(func === "Percent") ChangePercent;
+
+        console.log()
     });
 });

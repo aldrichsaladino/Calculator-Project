@@ -1,8 +1,7 @@
 /* style.css */
 
 body {
-    background-color:black;
-    color: white;
+    background-color:#FAF9F6;
     font-family: "Atma", system-ui;
     font-weight: 300;
     font-style: normal;
@@ -38,9 +37,10 @@ h1 {
 }
 
 .TopDisplay {
-    background: black;
+    display: flex;
+    justify-content: center;
     font-size: larger;
-    align-items: right;
+    align-items: center;
     height: 200;
     width: 500px;
     align-items: center;
@@ -50,11 +50,10 @@ h1 {
 }
 
 .ClearButtonEtc {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 5px;
-    padding: 10px;
-    background-color: grey;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: center;
+    margin-right: 50px;
 }
 
 
