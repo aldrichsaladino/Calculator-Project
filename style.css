@@ -1,7 +1,8 @@
 /* style.css */
 
 body {
-    background-color:#FAF9F6;
+    background-color:black;
+    color: white;
     font-family: "Atma", system-ui;
     font-weight: 300;
     font-style: normal;
@@ -10,6 +11,8 @@ body {
 main {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 h1 {
@@ -27,25 +30,31 @@ h1 {
 
 }
 
+.Calculator {
+    width: 400px;
+    background-color: darkslategrey;
+    border-radius: 20px;
+
+}
 
 .TopDisplay {
-    display: flex;
-    justify-content: center;
+    background: black;
     font-size: larger;
-    align-items: center;
+    align-items: right;
     height: 200;
     width: 500px;
     align-items: center;
     border: 3px;
     border-color: black;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .ClearButtonEtc {
-    display: flex;
-    justify-content: flex-start;
-    justify-content: center;
-    margin-right: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    padding: 10px;
+    background-color: grey;
 }
 
 
