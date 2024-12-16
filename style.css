@@ -1,12 +1,7 @@
 /* style.css */
 
 body {
-<<<<<<< HEAD
     background-color:#FAF9F6;
-=======
-    background-color:black;
-    color: white;
->>>>>>> 20f533aab4106f743ff67768a0adcda6306f7f00
     font-family: "Atma", system-ui;
     font-weight: 300;
     font-style: normal;
@@ -42,16 +37,10 @@ h1 {
 }
 
 .TopDisplay {
-<<<<<<< HEAD
     display: flex;
     justify-content: center;
     font-size: larger;
     align-items: center;
-=======
-    background: black;
-    font-size: larger;
-    align-items: right;
->>>>>>> 20f533aab4106f743ff67768a0adcda6306f7f00
     height: 200;
     width: 500px;
     align-items: center;
@@ -61,18 +50,10 @@ h1 {
 }
 
 .ClearButtonEtc {
-<<<<<<< HEAD
     display: flex;
     justify-content: flex-start;
     justify-content: center;
     margin-right: 50px;
-=======
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 5px;
-    padding: 10px;
-    background-color: grey;
->>>>>>> 20f533aab4106f743ff67768a0adcda6306f7f00
 }
 
 
