@@ -4,71 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator Project</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <main class="Main">
-        <h1 id="Header">Calculator Project</h1>
-        <div class="Calculator">
-            <div class="TopDisplay">
-                <div class="CurrentScreen">0</div>
+        <h1 class="Header">Calculator Project</h1>
+        <div class="ContentContainer">
+            <div class="Calculator">
+                <div class="TopDisplay" id="Screen">0</div>
+                <div class="Buttons">
+                <!--Removing the idea of blur. This will expand the calculator to be more flexible in inputs instead of creating it more "hardcoded. Learned that using data-* is easier witin javascript and ideally gives cleaner code than multiple onclikcs"-->
+                    <!-- Fixed grid to allow it to automatically drive correct buttons to destination-->
+                    <button class="Button Function" data-function="Clear">C</button>
+                    <button class="Button Function" data-function="ToggleSign">+/-</button>
+                    <button class="Button Function" data-function="Percent">%</button>
+                    <button class="Button Operator" data-operator="/">÷</button>
+                
+                    <!-- Number buttons -->
+                    <button class="Button Number" data-number="7">7</button>
+                    <button class="Button Number" data-number="8">8</button>
+                    <button class="Button Number" data-number="9">9</button>
+                    <button class="Button Operator" data-operator="*">×</button>
+                
+                    <button class="Button Number" data-number="4">4</button>
+                    <button class="Button Number" data-number="5">5</button>
+                    <button class="Button Number" data-number="6">6</button>
+                    <button class="Button Operator" data-operator="-">−</button>
+                
+                    <button class="Button Number" data-number="1">1</button>
+                    <button class="Button Number" data-number="2">2</button>
+                    <button class="Button Number" data-number="3">3</button>
+                    <button class="Button Operator" data-operator="+">+</button>
+                
+                    <button class="Button Number Zero" data-number="0">0</button>
+                    <button class="Button Number" data-number=".">.</button>
+                    <button class="Button Operator" data-operator="Calculate">=</button>
+                </div>
             </div>
-            <div class="Buttons">
-                <div class="NumberButtons">
-                    <button id="btn" onclick="this.blur()" data-number>7</button>
-                    <button id="btn" onclick="this.blur()" data-number>8</button>
-                    <button id="btn" onclick="this.blur()" data-number>9</button>
-                    
-                    <button id="btn" onclick="this.blur()" data-number>4</button>
-                    <button id="btn" onclick="this.blur()" data-number>5</button>
-                    <button id="btn" onclick="this.blur()" data-number>6</button>
-
-                    <button id="btn" onclick="this.blur()" data-number>1</button>
-                    <button id="btn" onclick="this.blur()" data-number>2</button>
-                    <button id="btn" onclick="this.blur()" data-number>3</button>
-
-                    <button class="Extended-button" id="btn" onclick="this.blur()" data-number>0</button>
-                    <button id="btn" onclick="this.blur()" data-number>.</button>
-                </div>    
+            <div class="ReadInstructions">
+                <h3 id="ReadHeader">Instructions/How to Use</h3>
+                <p id="ReadText">
+                    <ul class="ListItem">Select a range or combination of numbers, operations and compute to complete the calculation</ul>
+                    <ul class="ListItem">Use the additional buttons to convert to a percent or create the inverse value</ul>
+                    <ul class="ListItem">Select the AC button to clear the calculation or completed value at any time</ul>
+                </p>
             </div>
-            <div class="ClearButtonEtc">
-                <button id="Clearbtn" onclick="this.blur()">C</button>
-                <button id="PercentBtn" onclick="this.blur()">%</button>
-                <button id="InverseBrn" onclick="this.blur()">+/-</button>
-            </div>
-            <div class="OperatorButtons">
-                <button id="DivBtn" onclick="this.blur()">÷</button>
-                <button id="MultiBtn" onclick="this.blur()">x</button>
-                <button id="SubBtn" onclick="this.blur()">-</button>
-                <button id="AddBtn" onclick="this.blur()">+</button>
-                <button id="EqBtn" onclick="this.blur()">=</button>
-            </div>
-
+        <!--This marks the end of the Content Container-->
         </div>
-        <div class="ReadInstructions">
-            <h3 id="ReadHeader">Instructions/How to Use</h3>
-            <p id="ReadText">
-                <ul>Select a range or combination of numbers, operations and compute to complete the calculation</ul>
-                <ul>Use the additional buttons to convert to a percent or create the inverse value</ul>
-                <ul>Select the AC button to clear the calculation or completed value at any time</ul>
-            </p>
-        </div>
-        <div class="ReadInstructions">
-            <h3 id="ReadHeader">Instructions/How to Use</h3>
-            <p id="ReadText">
-                <ul>Select a range or combination of numbers, operations and compute to complete the calculation</ul>
-                <ul>Use the additional buttons to convert to a percent or create the inverse value</ul>
-                <ul>Select the AC button to clear the calculation or completed value at any time</ul>
-            </p>
-        </div>
-
+        
     </main>
     <footer class="Footer">
         <h3 id="Github">https://github.com/aldrichsaladino/Calculator-Project</h3>
     </footer>
 </body>
+<script src="scripts.js"></script>
 </html>
