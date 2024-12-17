@@ -13,6 +13,8 @@ let currentNumber = ""
 let previousNumber = ""
 let operator = null;
 
+//Set up the display with MOD
+const display = document.getElementById("Screen")
 
 //Set up the display with MOD
 const display = document.getElementById("Screen")
