@@ -104,7 +104,11 @@ body {
     border: solid 5px;
     border-color: black;
     padding: 10px;
-    width: 200px;
+    width: 300px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .ListItem {
