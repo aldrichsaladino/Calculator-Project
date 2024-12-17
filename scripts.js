@@ -26,6 +26,12 @@ function appendNumbers (number) {
     if(number === "." && currentNumber.includes(".")) return; // if . already exists then return nothing
     currentNumber+=number
     updateDisplay(currentNumber);
+
+    //will show the current number and operator until the next number is selected
+    if(operator) {
+        updateDisplay(`${previousNumber} ${operator} ${currentNumber}`)
+    }
+        updateDisplay(currentNumber);
 }
 
 //Function to set operator buttons in place for calculation
@@ -66,6 +72,8 @@ function calculateNumbers() {
             result = currentValue
     }
 
+    //Round the numbers
+    result = parseFloat(result.toFixed(3))
     currentNumber = result.toString()
     operator = null;
     previousNumber = ""
@@ -104,8 +112,13 @@ document.querySelectorAll("button").forEach((button)=> { //Loop in all of the bu
 
         // Next add in case notation so that each button knows the corresponding variables
         if(number !== undefined) appendNumbers(number); // if there is a number selected, use append function to add it to the number for calculation
-        if(op)
-        if(op !== undefined) setOperator(op) // if there is an operator selected, function to set operator for calculation
+        if (op !== undefined) {// if there is an operator selected, function to set operator for calculation
+            if (op === "Calculate") {
+                calculateNumbers();
+            } else {
+                setOperator(op);// ensures that if an operator is selected, and if its calculate it supersedes all other operators and calculates
+            }
+        }
         //if clauses specifically for the different function types
         if(func === "Clear") clearCalculator();
         if(func === "ToggleSign") ToggleSign();
@@ -114,3 +127,22 @@ document.querySelectorAll("button").forEach((button)=> { //Loop in all of the bu
         console.log()
     });
 });
+
+//Need to add keyboard functionalit too
+document.addEventListener("keydown", (e) => {
+    const key = e.key;
+
+    if(!isNaN(key) || key === ".") {
+        appendNumbers(key) // if the key pressed is not NA or a ., have it go through like the screen buttons
+    } else if (key === "+" || key === "-" || key === "*" || key === "/" ) {
+        setOperator(key)
+    } else if (key === "Enter" || key === "=") {
+        calculateNumbers();
+    } else if (key === "c" || key === "Escape") {
+        clearCalculator();
+    }
+
+});
+
+//set display as 0
+updateDisplay("0") // have the display set up at 0
