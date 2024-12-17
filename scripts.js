@@ -11,7 +11,7 @@
 //Name base variables
 let currentNumber = ""
 let previousNumber = ""
-let operator = null; 
+let operator = null;
 
 //Set up the display with MOD
 const display = document.getElementById("Screen")
@@ -29,12 +29,15 @@ function appendNumbers (number) {
 }
 
 //Function to set operator buttons in place for calculation
-function setOperator (op)
+function setOperator (op) {
     if(currentNumber === "") return;
-    if(previousNumber !== "") calculateNumbers;
+    if(previousNumber !== "") calculateNumbers();
     operator = op
     previousNumber = currentNumber;
     currentNumber = ""
+}
+
+updateDisplay("0") // have the display set up at 0
 
 //Function to calculate
 function calculateNumbers() {
@@ -58,6 +61,9 @@ function calculateNumbers() {
         case "/":
             result = prevValue / currentValue
             break;
+        // add a defaullt case that sets to current number if for some reason it does not work
+        default:
+            result = currentValue
     }
 
     currentNumber = result.toString()
@@ -90,7 +96,7 @@ function  ChangePercent (func) {
 
 }
 //Event Listeners for HTML buttons 
-document.querySelectorAll("Button").forEach((Button)=> { //Loop in all of the button types in HTMK
+document.querySelectorAll("button").forEach((button)=> { //Loop in all of the button types in HTMK
     button.addEventListener("click", () => {
         const number = button.dataset.number;
         const op = button.dataset.operator;
@@ -98,11 +104,12 @@ document.querySelectorAll("Button").forEach((Button)=> { //Loop in all of the bu
 
         // Next add in case notation so that each button knows the corresponding variables
         if(number !== undefined) appendNumbers(number); // if there is a number selected, use append function to add it to the number for calculation
+        if(op)
         if(op !== undefined) setOperator(op) // if there is an operator selected, function to set operator for calculation
         //if clauses specifically for the different function types
-        if(func === "Clear") clearCalculator;
-        if(func === "ToggleSign") ToggleSign;
-        if(func === "Percent") ChangePercent;
+        if(func === "Clear") clearCalculator();
+        if(func === "ToggleSign") ToggleSign();
+        if(func === "Percent") ChangePercent();
 
         console.log()
     });
