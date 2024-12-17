@@ -16,8 +16,6 @@ let operator = null;
 //Set up the display with MOD
 const display = document.getElementById("Screen")
 
-//Set up the display with MOD
-const display = document.getElementById("Screen")
 
 //Function to update the display
 function updateDisplay (value){
