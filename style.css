@@ -1,0 +1,107 @@
+/* style.css */
+
+body {
+    background-color:white;
+    color: black;
+    font-family: "Atma", system-ui;
+    font-weight: 300;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    color:black;
+    font-size: 30px;
+    border: 3px;
+    border-radius: 8px;
+    padding-top: 10px;
+}
+
+.Header {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+}
+
+.Calculator {
+    width: 320px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+.TopDisplay {
+    background: black;
+    color: white;
+    font-size: larger;
+    text-align: right;
+    height: 200;
+    line-height: 50px;
+    border: 3px;
+    border-color: white;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.ClearButtonEtc {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+
+.NumberButtons {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.OperatorButtons {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-bottom: 10px;
+    border-radius: 50%;
+    gap: 10px;
+}
+
+
+#btn {
+    background-color: #333;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    font-size: 40px;
+    padding: 20px;
+}
+
+#btn:hover {
+    background-color: #555;
+}
+
+#ClearBtn, #PercentBtn, #InverseBtn {
+    background-color: #a5a5a5;
+    color: black;
+    border-radius: 50%;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding-bottom: 20px;
+}
