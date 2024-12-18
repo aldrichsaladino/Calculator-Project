@@ -12,7 +12,7 @@ This is a simple, web-based implementation of a **Basic Calculator**. The calcul
 ## How It Works 🛠️
 1. **Enter Numbers and Operators**:  
    - Click on the number buttons (0-9) to input values.
-   - Select arithmetic operators (*+, -, *, /*) to perform calculations.
+   - Select arithmetic operators (+, -, x, /) to perform calculations.
    - Add any decimal as needed when performing calculations. <!-- This is an additional functionality I need to figure out-->
 
 2. **Perform Calculations**:  
