@@ -103,18 +103,19 @@ body {
     background-color:#faedcd;
 }
 
-.ReadInstructions {
+.ReadInstructions ul {
     display: block;
+    font-size: 18px;
     border: solid 5px;
     border-color: black;
-    padding: 10px;
     width: 300px;
 }
+
 
 .ListItem {
     display: list-item;
     color: black;
-    padding-left: 10px;
-    margin: 30px;
+    padding: 10px;
+    margin-top: 10px;
 
 }
