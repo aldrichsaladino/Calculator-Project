@@ -23,13 +23,8 @@ This is a simple, web-based implementation of a **Basic Calculator**. The calcul
 3. **Clear Button**:  
    - Use the "C" button to reset the display and start a new calculation.
 
-4. **Error Handling**:  
-   - If an invalid operation is attempted (e.g., dividing by zero), the calculator displays an error message and prevents further input until cleared.
-
 ## How to Run 🚀
-1. Clone this repository to your local machine:
-   ```bash
-   git clone <repository-url>
+Use this link here: https://aldrichsaladino.github.io/Calculator-Project/
 
 Code Structure 📂
 HTML:
