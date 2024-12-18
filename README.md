@@ -28,10 +28,10 @@ Use this link here: https://aldrichsaladino.github.io/Calculator-Project/
 
 ## Code Structure 📂
 HTML:
-- ** Includes the structure of the calculator, with buttons for digits, operators, and a display area.
+- Includes the structure of the calculator, with buttons for digits, operators, and a display area.
 CSS:
-- ** Styles the calculator interface with responsive design for better usability.
+- Styles the calculator interface wita h responsive design for better usability.
 JavaScript:
-- **updateDisplay(value): Updates the calculator display with the current input or result.
-- **performCalculation(): Executes the selected arithmetic operation.
-- **clearDisplay(): Resets the calculator to its initial state.
+- updateDisplay(value): Updates the calculator display with the current input or result.
+- performCalculation(): Executes the selected arithmetic operation.
+- clearDisplay(): Resets the calculator to its initial state.
