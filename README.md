@@ -26,13 +26,12 @@ This is a simple, web-based implementation of a **Basic Calculator**. The calcul
 ## How to Run 🚀
 Use this link here: https://aldrichsaladino.github.io/Calculator-Project/
 
-Code Structure 📂
+## Code Structure 📂
 HTML:
-Includes the structure of the calculator, with buttons for digits, operators, and a display area.
+- ** Includes the structure of the calculator, with buttons for digits, operators, and a display area.
 CSS:
-Styles the calculator interface with responsive design for better usability.
+- ** Styles the calculator interface with responsive design for better usability.
 JavaScript:
-updateDisplay(value): Updates the calculator display with the current input or result.
-performCalculation(): Executes the selected arithmetic operation.
-clearDisplay(): Resets the calculator to its initial state.
-handleError(): Displays an error message for invalid operations (e.g., division by zero).
+- **updateDisplay(value): Updates the calculator display with the current input or result.
+- **performCalculation(): Executes the selected arithmetic operation.
+- **clearDisplay(): Resets the calculator to its initial state.
