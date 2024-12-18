@@ -32,6 +32,12 @@ function appendNumbers (number) {
         updateDisplay(`${previousNumber} ${operator} ${currentNumber}`)
     }
     updateDisplay(currentNumber);
+
+    //will show the current number and operator until the next number is selected
+    if(operator) {
+        updateDisplay(`${previousNumber} ${operator} ${currentNumber}`)
+    }
+        updateDisplay(currentNumber);
 }
 
 //Function to set operator buttons in place for calculation
@@ -41,8 +47,10 @@ function setOperator (op) {
     operator = op
     previousNumber = currentNumber;
     currentNumber = ""
-    updateDisplay(`${previousNumber} ${operator}`)
 }
+
+updateDisplay("0") // have the display set up at 0
+updateDisplay(`${previousNumber} ${operator}`)
 
 //Function to calculate
 function calculateNumbers() {
@@ -124,9 +132,8 @@ document.querySelectorAll("button").forEach((button)=> { //Loop in all of the bu
         if(func === "Percent") ChangePercent();
 
         console.log()
-    })
+    });
 });
-
 
 //Need to add keyboard functionalit too
 document.addEventListener("keydown", (e) => {
@@ -146,3 +153,4 @@ document.addEventListener("keydown", (e) => {
 
 //set display as 0
 updateDisplay("0") // have the display set up at 0
+
