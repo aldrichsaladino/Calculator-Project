@@ -55,33 +55,49 @@ function calculateNumbers() {
     const currentValue = parseFloat(currentNumber)
     let result; // this leaves it null in preparation for the case caluse to determine the operator and calculation used
 
-    switch(operator) {
-        case "+":
-            result = prevValue + currentValue;
-            break;
-
-        case "-":
-            result = prevValue - currentValue
-            break;
-
-        case "*":
-            result = prevValue * currentValue
-            break;
-
-        case "/":
-            result = prevValue / currentValue
-            break;
-        // add a defaullt case that sets to current number if for some reason it does not work
-        default:
-            result = currentValue
+    // check for invalid numbers immediately
+    if(isNaN(prevValue) || isNaN(currentValue)) {
+        updateDisplay("Error")
+        return;
     }
+    try {
+        switch(operator) {
+            case "+":
+                result = prevValue + currentValue;
+                break;
 
-    //Round the numbers
-    result = parseFloat(result.toFixed(3))
-    currentNumber = result.toString()
-    operator = null;
-    previousNumber = ""
-    updateDisplay(currentNumber)
+            case "-":
+                result = prevValue - currentValue
+                break;
+
+            case "*":
+                result = prevValue * currentValue
+                break;
+
+            case "/":
+                // if for dividing by 0
+                if(currentValue === 0) {
+                    throw new Error ("Error: undefined")
+                }
+                result = prevValue / currentValue
+                break;
+            // add a defaullt case that sets to current number if for some reason it does not work
+            default:
+                result = currentValue
+        }
+
+        //Round the numbers
+        result = parseFloat(result.toFixed(3))
+        currentNumber = result.toString()
+        operator = null;
+        previousNumber = ""
+        updateDisplay(currentNumber)
+    } catch (error) {
+        //display the error
+        updateDisplay("Error")
+        console.error("Calculation Error:", error.message)
+    }
+    
 
 }
 

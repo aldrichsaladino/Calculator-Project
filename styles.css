@@ -104,18 +104,16 @@ body {
 }
 
 .ReadInstructions ul {
-    display: block;
     font-size: 18px;
-    border: solid 5px;
-    border-color: black;
+    border: solid 5px black;
     width: 300px;
+    color: black;
+    padding-left: 15px;
+    list-style: disc;
 }
 
-
-.ListItem {
+.ReadInstructions li {
     display: list-item;
+    margin-bottom: 10px;
     color: black;
-    padding: 10px;
-    margin-top: 10px;
-
 }
