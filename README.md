@@ -12,7 +12,7 @@ This is a simple, web-based implementation of a **Basic Calculator**. The calcul
 ## How It Works 🛠️
 1. **Enter Numbers and Operators**:  
    - Click on the number buttons (0-9) to input values.
-   - Select arithmetic operators (*+, -, *, /*) to perform calculations.
+   - Select arithmetic operators (+, -, x, /) to perform calculations.
    - Add any decimal as needed when performing calculations. <!-- This is an additional functionality I need to figure out-->
 
 2. **Perform Calculations**:  
@@ -23,21 +23,15 @@ This is a simple, web-based implementation of a **Basic Calculator**. The calcul
 3. **Clear Button**:  
    - Use the "C" button to reset the display and start a new calculation.
 
-4. **Error Handling**:  
-   - If an invalid operation is attempted (e.g., dividing by zero), the calculator displays an error message and prevents further input until cleared.
-
 ## How to Run 🚀
-1. Clone this repository to your local machine:
-   ```bash
-   git clone <repository-url>
+Use this link here: https://aldrichsaladino.github.io/Calculator-Project/
 
-Code Structure 📂
+## Code Structure 📂
 HTML:
-Includes the structure of the calculator, with buttons for digits, operators, and a display area.
+- Includes the structure of the calculator, with buttons for digits, operators, and a display area.
 CSS:
-Styles the calculator interface with responsive design for better usability.
+- Styles the calculator interface wita h responsive design for better usability.
 JavaScript:
-updateDisplay(value): Updates the calculator display with the current input or result.
-performCalculation(): Executes the selected arithmetic operation.
-clearDisplay(): Resets the calculator to its initial state.
-handleError(): Displays an error message for invalid operations (e.g., division by zero).
+- updateDisplay(value): Updates the calculator display with the current input or result.
+- performCalculation(): Executes the selected arithmetic operation.
+- clearDisplay(): Resets the calculator to its initial state.
